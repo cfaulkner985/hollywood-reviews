@@ -1,0 +1,20 @@
+/********** ALL PAGES  **********/
+body {
+  background-color: rgb(255, 255, 153);
+}
+
+/********** USER PAGE  **********/
+/***** FORM  *****/
+.input-field {
+  background-color:rgb(255, 255, 255);
+border: 2px solid black;
+  border-radius: 4px;
+}
+
+/********** REVIEWS PAGE  **********/
+/***** BUTTONS  *****/
+.reviews_button {
+  color: rgb(255, 255, 153);
+  margin-left: 1em;
+}
+
