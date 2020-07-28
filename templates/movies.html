@@ -1,21 +1,24 @@
+<!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
+
+<!--********** COLLAPSIBLE TO SHOW ALL MOVIES **********-->
 <ul class="collapsible" data-collapsible="accordion">
   {% for movies in movie_information %}
   <li>
     <div class="collapsible-header">
       <div class="task_header col s9">
         <i class="material-icons">expand_more</i
-        ><strong>{{movies.movie_title}}</strong> &nbsp; Reviewed By - {{movies.reviewed_by}}
+        ><strong>{{movies.title}}</strong> &emsp; <strong>- IMDB</strong> - {{movies.imdb}}
       </div>
     </div>
     <div class="collapsible-body">
       <span>
-        <strong>Release Date</strong> - {{movies.release_date}} <br>
-        <strong>Run Time</strong> - {{movies.run_time}} <br>
-        <strong>Top Billed Cast</strong> - {{movies.cast_1}}<br>
-        {{movies.cast_2}} <br>
-        {{movies.cast_3}} <br>
-        <strong>Synopsis</strong> - {{movies.synopsis}} <br>
+        <strong>Year Released</strong> - {{movies.year}} <br>
+        <strong>Run Time</strong> - {{movies.runtime}} <br>
+        <strong>Actors</strong> - {{movies.actors}}<br>
+        <strong>Director</strong> - {{movies.director}} <br>
+        <strong>Genres</strong> - {{movies.genres}} <br>
+        <strong>Plot</strong> - {{movies.plot}} <br>
       </span>
     </div>
   </li>
