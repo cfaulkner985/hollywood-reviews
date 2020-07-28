@@ -1,0 +1,32 @@
+<!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
+{% extends 'base.html' %} {% block content %}
+
+<!--********** COLLAPSIBLE TO SHOW THE REVIEWS LEFT **********-->
+<ul class="collapsible" data-collapsible="accordion">
+  {% for reviews in added_reviews %}
+  <li>
+    <div class="collapsible-header">
+      <div class="col s3">
+        <i class="material-icons">expand_more</i>
+      </div>
+      <div class="reviews_header col s9">
+        <strong>{{reviews.movie_reviewed}} - {{reviews.date_reviewed}}</strong>
+
+        <!--********** BUTTON TO EDIT THE REVIEWS **********-->
+        <a href="{{url_for('edit_reviews', reviews_id=reviews._id)}}" class="waves-effect waves-light btn reviews_button black">Edit</a>
+      </div>
+    </div>
+    <div class="collapsible-body">
+      <span>
+        <strong>First name</strong>- {{reviews.first_name}} <br />
+        <strong>Last name</strong> - {{reviews.last_name}} <br />
+        <strong>Country</strong> - {{reviews.country}}<br />
+        <strong>E-Mail</strong> - {{reviews.email}} <br />
+        <strong>Rating</strong> - {{reviews.rating}} <br />
+        <strong>Thoughts</strong> - {{reviews.thoughts}} <br />
+      </span>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
