@@ -3,18 +3,167 @@ body {
   background-color: rgb(255, 255, 153);
 }
 
+/***** NAV BAR  *****/
+nav {
+  background-color: black;
+  height: 12em;
+  line-height: 30px;
+  padding-top: 0.5em;
+}
+
+nav ul a {
+  padding-top: 5em;
+  font-size: 2em;
+  color: rgb(255, 255, 153);
+  padding: 2em 1.5em;
+}
+
 /********** USER PAGE  **********/
+/***** HEADING  *****/
+h3 {
+  text-align: center;
+}
+
 /***** FORM  *****/
 .input-field {
-  background-color:rgb(255, 255, 255);
-border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
   border-radius: 4px;
+}
+
+.nav-wrapper img {
+  height: 5em;
+  margin-bottom: 2em;
+}
+
+.input-field label {
+  color: #000;
+}
+
+.input-field input[type="text"]:focus + label {
+  color: #000;
+  padding-top: 1em;
+}
+
+.input-field input[type="email"]:focus + label {
+  color: #000;
+  padding-top: 1em;
+}
+
+.row .col {
+  float: none !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/***** RATINGS BAR  *****/
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #13cec4;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #13cec4;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #13cec4;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #13cec4;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: ##13cec4;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #13cec4;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #13cec4;
 }
 
 /********** REVIEWS PAGE  **********/
 /***** BUTTONS  *****/
-.reviews_button {
+.add_review {
   color: rgb(255, 255, 153);
-  margin-left: 1em;
+  margin: auto;
+  display: block;
 }
 
+/********** MOVIES PAGE  **********/
+/***** BUTTONS  *****/
+.insert_movie {
+  color: rgb(255, 255, 153);
+  margin: auto;
+  display: block;
+  margin-top: 1em;
+}
+
+/********** ADD MOVIES PAGE  **********/
+/***** BUTTONS  *****/
+.add_movie {
+  color: rgb(255, 255, 153);
+  margin: auto;
+  display: block;
+}
