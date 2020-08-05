@@ -1,11 +1,41 @@
 <!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
+<!--********** SIDER OF 3 IMAGES ON HOME PAGE **********-->
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="static/img/hollywood-banner-1.jpg" />
+      <div class="caption center-align">
+        <h1>Welcome to Hollywood Reviews!</h1>
+      </div>
+    </li>
+    <li>
+      <img src="static/img/hollywood-banner-2.jpg" />
+      <div class="caption left-align">
+        <h1>Reveiws!</h1>
+        <h3 class="light grey-text text-lighten-3">
+          Please leave a review for a movie of your choice and let us know what
+          you think!
+        </h3>
+      </div>
+    </li>
+    <li>
+      <img src="static/img/hollywood-banner-3.jpg" />
+      <div class="caption right-align">
+        <h1>Movies!</h1>
+        <h3 class="light grey-text text-lighten-3">
+          Please check out our list of movies which can be added to at anytime!
+        </h3>
+      </div>
+    </li>
+  </ul>
+</div>
+
 <!--********** FORM TO ADD A REVIEW **********-->
-<h3>Add Movie Review</h3>
+<h2>Add Movie Review</h2>
 <div class="row">
   <form action="{{ url_for('add_reviews') }}" method="POST" class="col s6">
-    
     <!--***** FIRST NAME *****-->
     <div class="input-field col s12">
       <input id="first_name" name="first_name" type="text" class="validate" />
