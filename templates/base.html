@@ -19,7 +19,7 @@
     <title>Hollywood Reviews</title>
   </head>
 
-<!--********** NAV BAR AND LOGO **********-->
+  <!--********** NAV BAR AND LOGO **********-->
   <body>
     <header>
       <nav>
@@ -47,7 +47,7 @@
         <li><a href="{{url_for('get_reviews')}}">Reviews</a></li>
       </ul>
     </header>
-    
+
     <!--********** BLOCK OF CONTENT FOR ALL PAGES **********-->
     {% block content %} {% endblock %}
 
@@ -60,6 +60,7 @@
     <!--********** USED FOR THE COLLASPE FUNTION IN MOVIE PAGE **********-->
     <!--********** USED FOR THE DATE PICKER FUNTION IN USER PAGE **********-->
     <!--********** USED FOR THE COUNTRY SELECTOR FUNTION IN USER PAGE **********-->
+    <!--********** USED FOR THE SLIDER IMAGES IN USER PAGE **********-->
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -76,6 +77,10 @@
 
       $(document).ready(function () {
         $("select").formSelect();
+      });
+
+      $(document).ready(function () {
+        $(".slider").slider();
       });
     </script>
   </body>
