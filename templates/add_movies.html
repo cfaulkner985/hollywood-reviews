@@ -1,5 +1,8 @@
+<!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html'%} {% block content %}
-<h3>Add Movie</h3>
+
+<!--********** HEADING **********-->
+<h2>Add Movie</h2>
 
 <!--********** FORM TO ADD MOVIES **********-->
 <form action="{{ url_for('insert_movie') }}" method="POST" class="col s12">
