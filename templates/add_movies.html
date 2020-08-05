@@ -1,0 +1,75 @@
+{% extends 'base.html'%} {% block content %}
+<h3>Add Movie</h3>
+
+<!--********** FORM TO ADD MOVIES **********-->
+<form action="{{ url_for('insert_movie') }}" method="POST" class="col s12">
+  <div class="row">
+  
+    <!--***** TITLE *****-->
+    <div class="input-field col s6">
+      <input id="title" name="title" type="text" class="validate" />
+      <label for="title">Title</label>
+    </div>
+
+    <!--***** IMDB RATING *****-->
+    <div class="input-field col s6">
+      <input id="imdb" name="imdb" type="text" class="validate" />
+      <label for="imdb">IMDB Rating</label>
+    </div>
+
+    <!--***** ROTTEN TOMATOES RATING *****-->
+    <div class="input-field col s6">
+      <input id="tomato" name="tomato" type="text" class="validate" />
+      <label for="tomato">Rotten Tomatos Rating</label>
+    </div>
+
+    <!--***** YEAR *****-->
+    <div class="input-field col s6">
+      <input id="year" name="year" type="text" class="validate" />
+      <label for="year">Year</label>
+    </div>
+
+    <!--***** RUN TIME *****-->
+    <div class="input-field col s6">
+      <input id="runtime" name="runtime" type="text" class="validate" />
+      <label for="runtime">Run Time</label>
+    </div>
+
+    <!--***** ACTORS *****-->
+    <div class="input-field col s6">
+      <input id="actors" name="actors" type="text" class="validate" />
+      <label for="actors">Actors</label>
+    </div>
+
+    <!--***** DIRECTOR *****-->
+    <div class="input-field col s6">
+      <input id="director" name="director" type="text" class="validate" />
+      <label for="director">Director</label>
+    </div>
+
+    <!--***** GENRES *****-->
+    <div class="input-field col s6">
+      <input id="genres" name="genres" type="text" class="validate" />
+      <label for="genres">Genres</label>
+    </div>
+
+    <!--***** PLOT *****-->
+    <div class="input-field col s6">
+      <input id="plot" name="plot" type="text" class="validate" />
+      <label for="plot">Plot</label>
+    </div>
+
+    <!--********** BUTTON TO ADD A MOVIE **********-->
+    <div class="row">
+      <button
+        class="btn add_movie waves-effect waves-light black"
+        type="submit"
+        name="action"
+      >
+        Add Movie
+        <i class="material-icons right">add</i>
+      </button>
+    </div>
+    {% endblock %}
+  </div>
+</form>
