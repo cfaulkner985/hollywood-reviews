@@ -4,20 +4,44 @@
 <!--********** FORM TO EDIT A REVIEW **********-->
 <h3>Edit Movie Review</h3>
 <div class="row">
-  <form action="{{ url_for('edit_reviews', reviews_id=reviews._id) }}" method="POST" class="col s6">
+  <form
+    action="{{ url_for('update_reviews', reviews_id=reviews._id) }}"
+    method="POST"
+    class="col s6"
+  >
+    <!--***** FIRST NAME *****-->
     <div class="input-field col s6">
-      <input id="first_name" name="first_name" type="text" class="validate" />
+      <input
+        id="first_name"
+        name="first_name"
+        type="text"
+        class="validate"
+        value="{{reviews.first_name}}"
+      />
       <label for="first_name">First Name</label>
     </div>
-    
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="last_name" name="last_name" type="text" class="validate" />
-        <label for="last_name">Last Name</label>
-      </div>
+
+    <!--***** LAST NAME *****-->
+    <div class="input-field col s6">
+      <input
+        id="last_name"
+        name="last_name"
+        type="text"
+        class="validate"
+        value="{{reviews.last_name}}"
+      />
+      <label for="last_name">Last Name</label>
     </div>
+
+    <!--***** COUNTRY *****-->
     <div class="input-field col s12" name="country">
-      <select id="country" name="country" type="text" class="validate">
+      <select
+        id="country"
+        name="country"
+        type="text"
+        class="validate"
+        value="{{reviews.country}}"
+      >
         <option value="Afghanistan">Afghanistan</option>
         <option value="Åland Islands">Åland Islands</option>
         <option value="Albania">Albania</option>
@@ -308,38 +332,71 @@
       <label>Please select Countr</label>
     </div>
 
+    <!--***** DATE REVIEWED *****-->
     <div class="input-field col s12">
-      <input type="text" name="date_reviewed" class="datepicker" />
+      <input
+        type="text"
+        name="date_reviewed"
+        class="datepicker"
+        value="{{reviews.date_reviewed}}"
+      />
       <label for="date_reviewed">Date of Review</label>
     </div>
+
+    <!--***** EMAIL *****-->
     <div class="input-field col s12">
-      <input id="email" name="email" type="email" class="validate" />
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="validate"
+        value="{{reviews.email}}"
+      />
       <label for="email">Email</label>
     </div>
+
+    <!--***** MOVIE REVIEWED *****-->
     <div class="input-field col s12">
       <input
         id="movie_reviewed"
         name="movie_reviewed"
         type="text"
         class="validate"
+        value="{{reviews.movie_reviewed}}"
       />
       <label for="movie_reviewed">Movie Reviewed</label>
     </div>
+
+    <!--***** RANGE *****-->
     <div class="range-field col s12">
-      <input type="range" name="rating" id="rating" min="0" max="100" />
+      <input
+        type="range"
+        name="rating"
+        id="rating"
+        min="0"
+        max="100"
+        value="{{reviews.rating}}"
+      />
       <label for="rating">Please rate movie from 1 to 100</label>
     </div>
+
+    <!--***** THOUGHTS *****-->
     <div class="input-field col s12">
       <textarea
         id="thoughts"
         name="thoughts"
         class="materialize-textarea"
+        value="{{reviews.thoughts}}"
       ></textarea>
       <label for="thoughts">Please enter thoughts on movie</label>
     </div>
 
-<!--********** BUTTON TO CONFIRM EDIT OF REVIEW **********-->
-    <button class="btn waves-effect waves-light black" type="submit" name="action">
+    <!--********** BUTTON TO CONFIRM EDIT OF REVIEW **********-->
+    <button
+      class="btn waves-effect waves-light black"
+      type="submit"
+      name="action"
+    >
       Submit Review
       <i class="material-icons right">playlist_add</i>
     </button>
