@@ -5,19 +5,23 @@
 <h3>Add Movie Review</h3>
 <div class="row">
   <form action="{{ url_for('add_reviews') }}" method="POST" class="col s6">
-    <div class="input-field col s6">
+    
+    <!--***** FIRST NAME *****-->
+    <div class="input-field col s12">
       <input id="first_name" name="first_name" type="text" class="validate" />
       <label for="first_name">First Name</label>
     </div>
-    
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="last_name" name="last_name" type="text" class="validate" />
-        <label for="last_name">Last Name</label>
-      </div>
+
+    <!--***** LAST NAME *****-->
+    <div class="input-field col s12">
+      <input id="last_name" name="last_name" type="text" class="validate" />
+      <label for="last_name">Last Name</label>
     </div>
-    <div class="input-field col s12" name="country">
+
+    <!--***** COUNTRY *****-->
+    <div class="input-field col s12">
       <select id="country" name="country" type="text" class="validate">
+        <option value="" disabled selected>Please select your country</option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Åland Islands">Åland Islands</option>
         <option value="Albania">Albania</option>
@@ -305,17 +309,21 @@
         <option value="Zambia">Zambia</option>
         <option value="Zimbabwe">Zimbabwe</option>
       </select>
-      <label>Please select Countr</label>
     </div>
 
+    <!--***** DATE REVIEWED *****-->
     <div class="input-field col s12">
       <input type="text" name="date_reviewed" class="datepicker" />
       <label for="date_reviewed">Date of Review</label>
     </div>
+
+    <!--***** EMAIL *****-->
     <div class="input-field col s12">
       <input id="email" name="email" type="email" class="validate" />
       <label for="email">Email</label>
     </div>
+
+    <!--***** MOVIE REVIWED *****-->
     <div class="input-field col s12">
       <input
         id="movie_reviewed"
@@ -325,23 +333,32 @@
       />
       <label for="movie_reviewed">Movie Reviewed</label>
     </div>
+
+    <!--***** RANGE *****-->
     <div class="range-field col s12">
       <input type="range" name="rating" id="rating" min="0" max="100" />
-      <label for="rating">Please rate movie from 1 to 100</label>
+      <label for="rating black">Please rate movie from 1 to 100</label>
     </div>
+
+    <!--***** THOUGHTS *****-->
     <div class="input-field col s12">
       <textarea
         id="thoughts"
         name="thoughts"
+        type="text"
         class="materialize-textarea"
       ></textarea>
       <label for="thoughts">Please enter thoughts on movie</label>
     </div>
 
-<!--********** BUTTON TO CONFIRM ADD OF REVIEW **********-->
-    <button class="btn waves-effect waves-light black" type="submit" name="action">
+    <!--********** BUTTON TO CONFIRM ADD OF REVIEW **********-->
+    <button
+      class="btn add_review waves-effect waves-light black"
+      type="submit"
+      name="action"
+    >
       Submit Review
-      <i class="material-icons right">playlist_add</i>
+      <i class="material-icons right">send</i>
     </button>
   </form>
 </div>
