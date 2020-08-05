@@ -18,7 +18,21 @@ nav ul a {
   padding: 2em 1.5em;
 }
 
+.brand-logo {
+  margin-right: 1em;
+}
+
+
 /********** USER PAGE  **********/
+/***** SLIDER IMAGES  *****/
+h1 {
+  text-shadow: 4px 4px black;
+}
+
+h3 {
+  text-shadow: 4px 4px black;
+}
+
 /***** HEADING  *****/
 h2 {
   text-align: center;
@@ -151,6 +165,14 @@ input[type=range]:focus::-ms-fill-upper {
   display: block;
 }
 
+/********** EDIT REVIEWS PAGE  **********/
+/***** BUTTONS  *****/
+.edit_review {
+  color: rgb(255, 255, 153);
+  margin: auto;
+  display: block;
+}
+
 /********** MOVIES PAGE  **********/
 /***** BUTTONS  *****/
 .insert_movie {
@@ -168,10 +190,4 @@ input[type=range]:focus::-ms-fill-upper {
   display: block;
 }
 
-h1 {
-  text-shadow: 4px 4px black;
-}
 
-h3 {
-  text-shadow: 4px 4px black;
-}
