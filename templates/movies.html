@@ -1,24 +1,41 @@
 <!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
+<!--********** BUTTON TO ADD MOVIES **********-->
+<a
+  href="{{url_for('add_movie')}}"
+  class="waves-effect waves-light btn insert_movie black"
+  >Add Movie</a
+>
+
 <!--********** COLLAPSIBLE TO SHOW ALL MOVIES **********-->
 <ul class="collapsible" data-collapsible="accordion">
   {% for movies in movie_information %}
   <li>
+  
+    <!--********** COLLAPSIBLE HEADING TO SHOW MOVIES **********-->
     <div class="collapsible-header">
       <div class="task_header col s9">
         <i class="material-icons">expand_more</i
-        ><strong>{{movies.title}}</strong> &emsp; <strong>- IMDB</strong> - {{movies.imdb}}
+        ><strong>{{movies.title}}</strong> &emsp;
+        <strong>- IMDB Rating</strong>
+        {% if 'imdb' in movies %} {{ movies.imdb.rating }} {% else %} No IMDB
+        Rating {% endif %} &emsp;
+        <strong>- Rotten Tomatoes Rating</strong> - {% if 'tomato' in movies %}
+        {{ movies.tomato.rating }} {% else %} No Rotten Tomatoes Rating {% endif
+        %}
       </div>
     </div>
+
+    <!--********** COLLAPSIBLE BODY TO SHOW MOVIES **********-->
     <div class="collapsible-body">
       <span>
-        <strong>Year Released</strong> - {{movies.year}} <br>
-        <strong>Run Time</strong> - {{movies.runtime}} <br>
-        <strong>Actors</strong> - {{movies.actors}}<br>
-        <strong>Director</strong> - {{movies.director}} <br>
-        <strong>Genres</strong> - {{movies.genres}} <br>
-        <strong>Plot</strong> - {{movies.plot}} <br>
+        <strong>Year Released</strong> - {{movies.year}} <br />
+        <strong>Run Time</strong> - {{movies.runtime}} <br />
+        <strong>Actors</strong> - {{movies.actors}}<br />
+        <strong>Director</strong> - {{movies.director}} <br />
+        <strong>Genres</strong> - {{movies.genres}} <br />
+        <strong>Plot</strong> - {{movies.plot}} <br />
       </span>
     </div>
   </li>
