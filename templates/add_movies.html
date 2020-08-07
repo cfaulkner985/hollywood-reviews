@@ -1,8 +1,13 @@
+<!DOCTYPE html>
+
 <!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html'%} {% block content %}
 
 <!--********** HEADING **********-->
 <h2>Add Movie</h2>
+
+<!--********** SUB HEADING **********-->
+<h4>Please add a movie from the form below</h4>
 
 <!--********** FORM TO ADD MOVIES **********-->
 <form action="{{ url_for('insert_movie') }}" method="POST" class="col s12">
@@ -16,25 +21,25 @@
 
     <!--***** IMDB RATING *****-->
     <div class="input-field col s6">
-      <input id="imdb" name="imdb" type="text" class="validate" />
+      <input id="imdb" name="imdb" type="number" class="validate" />
       <label for="imdb">IMDB Rating</label>
     </div>
 
     <!--***** ROTTEN TOMATOES RATING *****-->
     <div class="input-field col s6">
-      <input id="tomato" name="tomato" type="text" class="validate" />
+      <input id="tomato" name="tomato" type="number" class="validate" />
       <label for="tomato">Rotten Tomatos Rating</label>
     </div>
 
     <!--***** YEAR *****-->
     <div class="input-field col s6">
-      <input id="year" name="year" type="text" class="validate" />
+      <input id="year" name="year" type="number" class="validate" />
       <label for="year">Year</label>
     </div>
 
     <!--***** RUN TIME *****-->
     <div class="input-field col s6">
-      <input id="runtime" name="runtime" type="text" class="validate" />
+      <input id="runtime" name="runtime" type="number" class="validate" />
       <label for="runtime">Run Time</label>
     </div>
 
@@ -65,11 +70,11 @@
     <!--********** BUTTON TO ADD A MOVIE **********-->
     <div class="row">
       <button
-        class="btn add_movie waves-effect waves-light black"
+        class="btn insert_movie waves-effect waves-light black"
         type="submit"
         name="action"
       >
-        Add Movie
+        Insert Movie
         <i class="material-icons right">add</i>
       </button>
     </div>
