@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
@@ -34,8 +36,13 @@
 
 <!--********** FORM TO ADD A REVIEW **********-->
 <h2>Add Movie Review</h2>
+
+<!--********** SUB HEADING **********-->
+<h4>Please leave a review from the form below</h4>
+
 <div class="row">
   <form action="{{ url_for('add_reviews') }}" method="POST" class="col s6">
+  
     <!--***** FIRST NAME *****-->
     <div class="input-field col s12">
       <input id="first_name" name="first_name" type="text" class="validate" />
@@ -383,7 +390,7 @@
 
     <!--********** BUTTON TO CONFIRM ADD OF REVIEW **********-->
     <button
-      class="btn add_review waves-effect waves-light black"
+      class="btn submit_review waves-effect waves-light black"
       type="submit"
       name="action"
     >
