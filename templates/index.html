@@ -16,7 +16,7 @@
       <img src="static/img/hollywood-banner-2.jpg" />
       <div class="caption left-align">
         <h1>Reviews!</h1>
-        <h3 class="light grey-text text-lighten-3">
+        <h3>
           Please leave a review for a movie of your choice and let us know what
           you think!
         </h3>
@@ -26,7 +26,7 @@
       <img src="static/img/hollywood-banner-3.jpg" />
       <div class="caption right-align">
         <h1>Movies!</h1>
-        <h3 class="light grey-text text-lighten-3">
+        <h3>
           Please check out our list of movies which can be added to at anytime!
         </h3>
       </div>
@@ -42,7 +42,6 @@
 
 <div class="row">
   <form action="{{ url_for('add_reviews') }}" method="POST" class="col s6">
-
     <!--***** FIRST NAME *****-->
     <div class="input-field col s12">
       <input id="first_name" name="first_name" type="text" class="validate" />
