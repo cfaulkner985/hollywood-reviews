@@ -1,8 +1,13 @@
+<!DOCTYPE html>
+
 <!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
 <!--********** HEADING **********-->
 <h2>Edit Movie Review</h2>
+
+<!--********** SUB HEADING **********-->
+<h4>Please edit your review from the form below</h4>
 
 <!--********** FORM TO EDIT A REVIEW **********-->
 <div class="row">
@@ -395,11 +400,11 @@
 
     <!--********** BUTTON TO CONFIRM EDIT OF REVIEW **********-->
     <button
-      class="btn edit_review waves-effect waves-light black"
+      class="btn confirm_edit waves-effect waves-light black"
       type="submit"
       name="action"
     >
-      Submit Review
+      Edit Review
       <i class="material-icons right">edit</i>
     </button>
   </form>
