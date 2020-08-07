@@ -1,13 +1,18 @@
+<!DOCTYPE html>
+
 <!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
 <!--********** HEADING **********-->
 <h2>Movies</h2>
 
+<!--********** SUB HEADING **********-->
+<h4>Movies are listed below</h4>
+
 <!--********** BUTTON TO ADD MOVIES **********-->
 <a
   href="{{url_for('add_movie')}}"
-  class="waves-effect waves-light btn insert_movie black"
+  class="waves-effect waves-light btn add_movie black"
   >Add Movie</a
 >
 
@@ -22,10 +27,10 @@
         <i class="material-icons">expand_more</i
         ><strong>{{movies.title}}</strong> &emsp;
         <strong>- IMDB Rating</strong>
-        {% if 'imdb' in movies %} {{ movies.imdb.rating }} {% else %} No IMDB
+        {% if 'imdb' in movies %} {{ movies.imdb }} {% else %} No IMDB
         Rating {% endif %} &emsp;
         <strong>- Rotten Tomatoes Rating</strong> - {% if 'tomato' in movies %}
-        {{ movies.tomato.rating }} {% else %} No Rotten Tomatoes Rating {% endif
+        {{ movies.tomato }} {% else %} No Rotten Tomatoes Rating {% endif
         %}
       </div>
     </div>
