@@ -16,30 +16,34 @@ Ideal user of this site would be:
 * People who want information on particular movies
 * People who want to add new movies to the site to keep it updated for other.
 In this website I have a home page which is the page that will load up when you enter the site. This is where the user will be able leave a review. They will fill in the fields listed below:
-* First name
-* Last name
-* Country
-* E-Mail
-* Movie Reviewed
-* Movie Reviewed
-* Rating
-* Thoughts
+  * First name
+  * Last name
+  * Country
+  * Date of Review
+  * E-Mail
+  * Movie Reviewed
+  * Rating
+  * Thoughts
 
 Once they have filled in this information then they click on the ‘Submit Review’ button to leave their review.
 
 ## Wireframe
-Wireframe mock-up for [Home Page](https://github.com/cfaulkner985/premier-league-memory-game/blob/master/wireframe/Wireframe%20-%20Main%20Page.pdf)
+Wireframe mock-up for [Home Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Home%20Page.pdf)
 
 The next page is the reviews page where they can see the review they have left. They click on the collapsible tab and they will see all the information they provided. They have two options if they are not happy with the review. They could edit or delete using the ‘Edit’ and ‘Delete’ buttons provided to the right of the review
+
 ## Wireframe
-Wireframe mock-up for [Reviews Page](https://github.com/cfaulkner985/premier-league-memory-game/blob/master/wireframe/Wireframe%20-%20Main%20Page.pdf)
+Wireframe mock-up for [Reviews Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Reviews.pdf)
+
 If the user decides to click on the ‘Edit’ button then it will bring them to a page that is similar to the Home Page. They will be able to edit any choices they make previously. Once they are happy with their changes then they can click on ‘Edit Review’ button to update the changes. The changes will then appear updated on the Reviews page.
+
 ## Wireframe
-Wireframe mock-up for [Edit Reviews Page](https://github.com/cfaulkner985/premier-league-memory-game/blob/master/wireframe/Wireframe%20-%20Main%20Page.pdf)
+Wireframe mock-up for [Edit Reviews Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Edit%20Reviews.pdf)
+
 The movie page is a database of over 2000 movies and is viewed on a collapsible menu similar to the reviews page. The main heading will show the movie’s title, IMDB rating and rotten tomatoes rating. Once the user clicks to expand it then they will see:
 
 * Year Released
- * Run Time
+* Run Time
 * Actors
 * Director
 * Genres
@@ -48,11 +52,12 @@ The movie page is a database of over 2000 movies and is viewed on a collapsible 
 If the user cannot find the movie they are looking for then they have the option of clicking on the ‘Add Movie’ button to add a new movie to the site
 
 ## Wireframe
-Wireframe mock-up for [Movies Page](https://github.com/cfaulkner985/premier-league-memory-game/blob/master/wireframe/Wireframe%20-%20Main%20Page.pdf)
+Wireframe mock-up for [Movies Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Movies.pdf)
+
 If the user does click on the ‘Add Movie’ button then it will bring them to the add movie page. This page will let the user add a movie and will be able to be seen by anyone else who visits the site. The user will have the same information as the movies page to fill out to insert the movie. Once they are happy they click on the ‘Insert Movie’ button and the movie will be added to the Movies page.
 
 ## Wireframe
-Wireframe mock-up for [Add Movies Page](https://github.com/cfaulkner985/premier-league-memory-game/blob/master/wireframe/Wireframe%20-%20Main%20Page.pdf)
+Wireframe mock-up for [Add Movies Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Add%20Movie.pdf)
 
 # Features
 ## Existing Features
@@ -97,7 +102,7 @@ Wireframe mock-up for [Add Movies Page](https://github.com/cfaulkner985/premier-
 * I used Material Icons (https://material.io/resources/icons/to add the icons for the buttons
 * Block templates were used so I don’t have to repeat my code to save time
 * I used autopep8 (https://github.com/hhatto/autopep8) to tidy up my python code
-
+* Other rechnologies used can be found in my [Requirements](https://github.com/cfaulkner985/hollywood-reviews/blob/master/requirements.txt) file.
 * The project also uses AutoPrefixer (https://autoprefixer.github.io/) and makes sure the CSS is valid for all web browsers
 
 ## Committing files to GitHub
@@ -113,9 +118,13 @@ Testing was done on a seperate document which is: [Testing.md](https://github.co
 
 ## Flask and Heroku
 The first this I did when creating my project was install flask. I did this my typing in ‘pip install flask’ into my project’s Gitpod terminal. Once I created the python file I ran a test to make sure that it was linked correctly and assigned it a port which I would then link to Heroku.
+
 Before I go any further with Heroku I have to create a requirements file. So In my terminal I type ‘pip3 freeze --local > requirements.txt and this will create the requirements file on Gitpod.
+
 I also have to create a Profile before I push the files over to Heroku. To do this I type ‘echo web: python app.py > Procfile’ into the terminal and this will add the Profile to my list of files.
+
 I signed into heroku using ‘heroku login’ and once I was logged in I added the files to heroku. I created a new Git repository and then deployed it to the Heroku repository by typing ‘git push heroku master’ into the terminal.
+
 In Heroku I then linked the IP and port which I created in the python file. I set the IP to ‘0.0.0.0’ and the Port to ‘5000’ then I opened the app in Heroku and it opened up as expected.
 
 ## Deployment
@@ -148,11 +157,13 @@ Image for favicon - https://i.pinimg.com/originals/7f/d3/2b/7fd32b6ebfa4d4fdb363
 
 Images for the slider
 Image 1 – https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQRpBgcQPzFKor3qT8lJNGBhJW3EJS-PhIVcw&usqp=CAU
+
 Image 2 – https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/losangeles/06-route-detail/View-Of-Hollywood-Street-Neon-Signs-Big-Bus-Tours-Los-Angeles-Hollywood-Loop.jpg
+
 Image 3 -  https://www.shortlist.com/media/imager/202002/46036-original.jpg
 
 ### Other
-I would also like to thank https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css// for helping me with the range slider on my add reviews page
+I got help for the ratings slider bar from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css// which can be viewed in my Reviwes and Edit Reviews page
 
 
 My mentor Rohit Sharma was a great help guided me through this project.
