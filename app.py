@@ -16,19 +16,29 @@ mongo = PyMongo(app)
 # ---------- REVIEWS ---------- #
 # SETTING USER.HTML MY OPENING PAGE FOR THE SITE
 # LINKING THE USER INFORMATION TABLE IN MONGO DB TO MY USER.HTML PAGE
+
+
 @app.route('/')
 @app.route('/insert_review')
 def add_review():
-    return render_template("user.html", user_information=mongo.db.user_information.find())
+    return render_template(
+        "user.html",
+        user_information=mongo.db.user_information.find())
 
 # LINKING THE ADDED REVIEWS TABLE IN MONGO DB TO MY REVIEWS.HTML PAGE
+
+
 @app.route('/get_reviews')
 def get_reviews():
-    return render_template("reviews.html", added_reviews=mongo.db.added_reviews.find())
+    return render_template(
+        "reviews.html",
+        added_reviews=mongo.db.added_reviews.find())
 
 # THIS CODE BRINGS THE INFORMATION I INSERT INTO USER.HTML TO REVIEWS.HTML
 # USING THE SUMBIT BUTTON
 # IT ALSO SAVES THE INFORMATION INTO THE ADDED REVIEWS TABLE IN MONGO DB
+
+
 @app.route('/add_reviews', methods=['POST'])
 def add_reviews():
     added_reviews = mongo.db.added_reviews
@@ -37,6 +47,8 @@ def add_reviews():
 
 # CREATED EDIT_REWIEWS.HTML SO I CAN EDIT REVIEWS CLICKING ON THE EDIT BUTTON
 # ONCE EDITED IT WILL AMMEND IN THE REVIEWS.HTML AND MONGO DB TABLE
+
+
 @app.route('/edit_reviews/<reviews_id>')
 def edit_reviews(reviews_id):
     the_review = mongo.db.added_reviews.find_one({"_id": ObjectId(reviews_id)})
@@ -46,6 +58,8 @@ def edit_reviews(reviews_id):
 
 # THIS CODE ALLOWS ME TO DELETE REVIEWS CLICKING ON THE DELETE BUTTON
 # ONCE DELETED IT WILL REMOVE FROM THE REVIEWS.HTML AND MONGO DB TABLE
+
+
 @app.route('/delete_reviews/<reviews_id>')
 def delete_reviews(reviews_id):
     mongo.db.added_reviews.remove({'_id': ObjectId(reviews_id)})
@@ -54,6 +68,8 @@ def delete_reviews(reviews_id):
 # THIS CODE IS LINKED TO THE EDIT BUTTON ON THE EDIT_REVIEWS.HTML
 # IT UPDATES THE MONGO DB TABLE WHICH THEN UPDATES THE REVIEW LEFT
 # I CAN UPDATE THE HEADING WHICH ARE LISTED BELOW
+
+
 @app.route('/update_reviews/<reviews_id>', methods=["POST"])
 def update_reviews(reviews_id):
     added_reviews = mongo.db.added_reviews
@@ -72,21 +88,38 @@ def update_reviews(reviews_id):
 
 # ---------- MOVIES ---------- #
 # LINKING THE MOVIE INFORMATION TABLE IN MONGO DB TO MY MOVIES.HTML PAGE
+
+
 @ app.route('/get_movies')
 def get_movies():
-    return render_template("movies.html", movie_information=mongo.db.movie_information.find())
+    return render_template(
+        "movies.html",
+        movie_information=mongo.db.movie_information.find())
 
 
-# CREATED ADD_MOVIESS.HTML SO I CAN ADD MOVIES CLICKING ON THE
+# CREATED ADD_MOVIES.HTML SO I CAN ADD MOVIES CLICKING ON THE
 # ADD MOVIES BUTTON
 # ONCE ADDED IT WILL BE INSERTED IN THE MOVIES.HTML AND MONGO DB TABLE
 @app.route('/insert_movie', methods=['POST'])
 def insert_movie():
-    movie_added = {'title': request.form.get('title')}
-    mongo.db.movie_information.insert_one(movie_added)
-    return redirect(url_for('get_movies'))
+    if request.method == "POST":
+        info = {
+            'title': request.form.get('title'),
+            'imdb': request.form.get('imdb'),
+            'tomato': request.form.get('tomato'),
+            'year': request.form.get('year'),
+            'runtime': request.form.get('runtime'),
+            'actors': request.form.get('actors'),
+            'director': request.form.get('director'),
+            'genres': request.form.get('genres'),
+            'plot': request.form.get('plot')
+        }
+        mongo.db.movie_information.insert_one(info)
+        return redirect(url_for("get_movies"))
 
 # LINKING THE MOVIE INFORMATION TABLE IN MONGO DB TO MY ADD_MOVIES.HTML PAGE
+
+
 @app.route('/add_movie')
 def add_movie():
     return render_template('add_movies.html')
