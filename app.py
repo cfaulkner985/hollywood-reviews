@@ -14,15 +14,15 @@ app.config["MONGO_URI"] = 'mongodb+srv://cfaulkner985:mongoDB123@myfirstcluster.
 mongo = PyMongo(app)
 
 # ---------- REVIEWS ---------- #
-# SETTING USER.HTML MY OPENING PAGE FOR THE SITE
-# LINKING THE USER INFORMATION TABLE IN MONGO DB TO MY USER.HTML PAGE
+# SETTING INDEX.HTML MY OPENING PAGE FOR THE SITE
+# LINKING THE USER INFORMATION TABLE IN MONGO DB TO MY INDEX.HTML PAGE
 
 
 @app.route('/')
 @app.route('/insert_review')
 def add_review():
     return render_template(
-        "user.html",
+        "index.html",
         user_information=mongo.db.user_information.find())
 
 # LINKING THE ADDED REVIEWS TABLE IN MONGO DB TO MY REVIEWS.HTML PAGE
@@ -34,7 +34,7 @@ def get_reviews():
         "reviews.html",
         added_reviews=mongo.db.added_reviews.find())
 
-# THIS CODE BRINGS THE INFORMATION I INSERT INTO USER.HTML TO REVIEWS.HTML
+# THIS CODE BRINGS THE INFORMATION I INSERT INTO INDEX.HTML TO REVIEWS.HTML
 # USING THE SUMBIT BUTTON
 # IT ALSO SAVES THE INFORMATION INTO THE ADDED REVIEWS TABLE IN MONGO DB
 
