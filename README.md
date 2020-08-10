@@ -4,7 +4,7 @@
 
 # ReadMe
 
-Link to view the website - https://cfaulkner985.github.io/hollywood-reviews/
+Link to view the website - https://hollywood-reviews.herokuapp.com/
 
 I am creating a moved based website called Hollywood reviews. This website will be for movie lover who want to share their views on the latest or other movies they have seen. Also the website will include a movie database so if the user wants to find out information about the movie eg. Directors, actors then they will find it here. If there is a chance that the movie is not here then they will be able to add it as there is an add movie function on the site.
 # UX
@@ -129,25 +129,22 @@ In Heroku I then linked the IP and port which I created in the python file. I se
 
 ## Deployment
 This project was developed using the GitPod (https://gitpod.io/) and was committed to git and pushed to GitHub using the built in function within GitPod.
-In GitHub the repository is cfaulkner985/Hollywood-reviews (https://github.com/cfaulkner985/hollywood-reviews). Below is the way to deploy the files to GitHub:
-1. Log into GitHub. 
-2. From the list of repositories on the screen, select ‘cfaulkner985/holly-reviews
-3. From the menu items near the top of the page, select ‘Settings’.
-4. Scroll down to the ‘GitHub Pages’ section.
-5. Under ‘Source’ click the drop-down menu labelled ‘None’ and select ‘Master Branch’
-6. On selecting Master Branch the page is automatically refreshed, the website is now deployed. 
-7. Scroll back down to the ‘GitHub Pages’ section to retrieve the link to the deployed website.
+In GitHub the repository is cfaulkner985/Hollywood-reviews (https://github.com/cfaulkner985/hollywood-reviews). Below is the way to deploy the files to Heroku:
+1. From by GitPod terminal I loginto my Heroku account by typing in 'heroku login' and press return 
+2. I then press any key on the keyboard to continue and it will log me into my heroku account
+3. Also from the GitPod terminal I push the files to Heroku by typing in 'git push heroku master'
+4. From heroku I click on my project which is 'hollywood reviews'
+5. I then click on Deploy which is a tab along the top
+6. From this page I scroll down to the bottom and click on 'Deploy Branch' and make sure 'master' is selected.
+7. After this is then lets me know it is seccessfully deployed and can be found at 'https://hollywood-reviews.herokuapp.com/'
+
 
 ## How to run this project locally
-To clone this project from GitHub:
-1. Download GitHub Desktop (https://desktop.github.com/)
-2. Follow this link – (https://github.com/cfaulkner985/premier-league-memory-game) and it will bring you to the main repository page for this project.
-3. Under the repository name, click "Clone or download".
-4. In the Clone with HTTPs section select ‘Open in Desktop’ 
-5. Then select ‘Open GitHub Desktop’
-6. Click Choose... and, using Windows Explorer, navigate to a local path where you want to clone the repository.
-7. Click Clone.
-Further reading and troubleshooting on cloning a repository from GitHub can be found at: https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop
+1. To locally start all of the process types that are defined in your Procfile:
+2. I type in 'heroku local' into the terminal (heroku local is a shorter alternative to heroku local:start which does the same thing.)
+3. To locally start I then type in 'heroku local web'
+4. I can now the app locally.
+5. I then press Ctrl+C to shut it down when I am done.
 
 ## Credits
 ### Images
