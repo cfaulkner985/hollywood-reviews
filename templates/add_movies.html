@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 
-<!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html'%} {% block content %}
 
-<!--********** HEADING **********-->
 <h2>Add Movie</h2>
 
-<!--********** SUB HEADING **********-->
-<h4>Please add a movie from the form below</h4>
+<h4>Please add a movie on the form below</h4>
 
 <!--********** FORM TO ADD MOVIES **********-->
 <form action="{{ url_for('insert_movie') }}" method="POST" class="col s12">
   <div class="row">
-  
-    <!--***** TITLE *****-->
-    <div class="input-field col s6">
-      <input id="title" name="title" type="text" class="validate" />
-      <label for="title">Title</label>
+    <div class="input-box col s6">
+      <input
+        id="title"
+        name="title"
+        type="text"
+        class="validate"
+        placeholder="Title"
+      />
     </div>
 
-    <!--***** IMDB RATING *****-->
-    <div class="input-field col s6">
-      <input id="imdb" name="imdb" type="number" class="validate" />
-      <label for="imdb">IMDB Rating</label>
+    <br />
+
+    <div class="input-box col s6">
+      <input
+        id="year"
+        name="year"
+        type="number"
+        class="validate"
+        placeholder="Year"
+      />
     </div>
 
-    <!--***** ROTTEN TOMATOES RATING *****-->
-    <div class="input-field col s6">
-      <input id="tomato" name="tomato" type="number" class="validate" />
-      <label for="tomato">Rotten Tomatos Rating</label>
+    <br />
+
+    <div class="input-box col s6">
+      <input
+        id="runtime"
+        name="runtime"
+        type="number"
+        class="validate"
+        placeholder="Run Time"
+      />
     </div>
 
-    <!--***** YEAR *****-->
-    <div class="input-field col s6">
-      <input id="year" name="year" type="number" class="validate" />
-      <label for="year">Year</label>
+    <br />
+
+    <div class="input-box col s6">
+      <input
+        id="actors"
+        name="actors"
+        type="text"
+        class="validate"
+        placeholder="Actors"
+      />
     </div>
 
-    <!--***** RUN TIME *****-->
-    <div class="input-field col s6">
-      <input id="runtime" name="runtime" type="number" class="validate" />
-      <label for="runtime">Run Time</label>
+    <br />
+
+    <div class="input-box col s6">
+      <input
+        id="director"
+        name="director"
+        type="text"
+        class="validate"
+        placeholder="Director"
+      />
     </div>
 
-    <!--***** ACTORS *****-->
-    <div class="input-field col s6">
-      <input id="actors" name="actors" type="text" class="validate" />
-      <label for="actors">Actors</label>
+    <br />
+
+    <div class="input-box col s6">
+      <input
+        id="genres"
+        name="genres"
+        type="text"
+        class="validate"
+        placeholder="Genres"
+      />
     </div>
 
-    <!--***** DIRECTOR *****-->
-    <div class="input-field col s6">
-      <input id="director" name="director" type="text" class="validate" />
-      <label for="director">Director</label>
-    </div>
+    <br />
 
-    <!--***** GENRES *****-->
-    <div class="input-field col s6">
-      <input id="genres" name="genres" type="text" class="validate" />
-      <label for="genres">Genres</label>
-    </div>
-
-    <!--***** PLOT *****-->
-    <div class="input-field col s6">
+    <div class="input-box col s6">
       <input id="plot" name="plot" type="text" class="validate" />
-      <label for="plot">Plot</label>
     </div>
 
-    <!--********** BUTTON TO ADD A MOVIE **********-->
+    <br />
+
     <div class="row">
       <button
         class="btn insert_movie waves-effect waves-light black"
