@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-<!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
 <!--********** SIDER OF 3 IMAGES ON HOME PAGE **********-->
@@ -34,28 +33,38 @@
   </ul>
 </div>
 
-<!--********** FORM TO ADD A REVIEW **********-->
 <h2>Add Movie Review</h2>
 
-<!--********** SUB HEADING **********-->
-<h4>Please leave a review from the form below</h4>
+<h4>Please leave a review on the form below</h4>
 
+<!--********** FORM FOR THE USER TO LEAVE A REVIEW **********-->
 <div class="row">
   <form action="{{ url_for('add_reviews') }}" method="POST" class="col s6">
-    <!--***** FIRST NAME *****-->
-    <div class="input-field col s12">
-      <input id="first_name" name="first_name" type="text" class="validate" />
-      <label for="first_name">First Name</label>
+    <div class="input-box col s12">
+      <input
+        id="first_name"
+        name="first_name"
+        type="text"
+        class="validate"
+        placeholder="First Name"
+      />
     </div>
 
-    <!--***** LAST NAME *****-->
-    <div class="input-field col s12">
-      <input id="last_name" name="last_name" type="text" class="validate" />
-      <label for="last_name">Last Name</label>
+    <br />
+
+    <div class="input-box col s12">
+      <input
+        id="last_name"
+        name="last_name"
+        type="text"
+        class="validate"
+        placeholder="Last Name"
+      />
     </div>
 
-    <!--***** COUNTRY *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <select id="country" name="country" type="text" class="validate">
         <option value="" disabled selected>Please select your country</option>
         <option value="Afghanistan">Afghanistan</option>
@@ -347,47 +356,61 @@
       </select>
     </div>
 
-    <!--***** DATE REVIEWED *****-->
-    <div class="input-field col s12">
-      <input type="text" name="date_reviewed" class="datepicker" />
-      <label for="date_reviewed">Date of Review</label>
+    <br />
+
+    <div class="input-box col s12">
+      <input
+        type="text"
+        name="date_reviewed"
+        class="datepicker"
+        placeholder="Date of Review"
+      />
     </div>
 
-    <!--***** EMAIL *****-->
-    <div class="input-field col s12">
-      <input id="email" name="email" type="email" class="validate" />
-      <label for="email">Email</label>
+    <br />
+
+    <div class="input-box col s12">
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="validate"
+        placeholder="E-Mail"
+      />
     </div>
 
-    <!--***** MOVIE REVIWED *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <input
         id="movie_reviewed"
         name="movie_reviewed"
         type="text"
         class="validate"
+        placeholder="Movie reviewed"
       />
-      <label for="movie_reviewed">Movie Reviewed</label>
     </div>
 
-    <!--***** RANGE *****-->
+    <br />
+
     <div class="range-field col s12">
       <input type="range" name="rating" id="rating" min="0" max="100" />
-      <label for="rating black">Please rate movie from 1 to 100</label>
+      <label for="rating">Please rate movie from 1 to 100</label>
     </div>
 
-    <!--***** THOUGHTS *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <textarea
         id="thoughts"
         name="thoughts"
         type="text"
-        class="materialize-textarea"
+        placeholder="Please enter thoughts on movie"
       ></textarea>
-      <label for="thoughts">Please enter thoughts on movie</label>
     </div>
 
-    <!--********** BUTTON TO CONFIRM ADD OF REVIEW **********-->
+    <br />
+
     <button
       class="btn submit_review waves-effect waves-light black"
       type="submit"
