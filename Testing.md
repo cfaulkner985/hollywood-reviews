@@ -50,14 +50,17 @@ The Edit Review page load up correctly and displays the form to edit the reviews
 </p>
 
 ## Movies Page
-* This will display the list of movies in a collapsible. The heading of the collapsible will displays movie title, IMDB rating and rotten tomatoes rating and when the user clicks on this it will display the rest of the information about the movie.
+* This will display the list of movies in a collapsible. The heading of the collapsible will displays movie title and when the user clicks on this it will display the rest of the information about the movie.
 * The page also has an add movie button where the user will press to add movie to the movies page. It will bring them to the add movies page
+* This page also has a search funtion where the user can search for a movie on the list of movies by typing it in and clicking on the submit button
 <p align="center"> 
 <img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/movies.png">
 </p>
-The movies page loads up correctly when the link is clicked. The movies display in a collapsible and when you click on the heading it displays the rest of the information as expected. The user then can click on the Add Movie button which will bring the user to the add movies page as expected.
+<p align="center"> 
+<img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/search-bar.png">
+</p>
 
-
+The movies page loads up correctly when the link is clicked. The movies display in a collapsible and when you click on the heading it displays the rest of the information as expected. The user then can click on the Add Movie button which will bring the user to the add movies page as expected. Also when the user searches for the movie and clicks 'Submit'. It will bring them to the movie they want and if they keep pressing 'Submit' it will bring them to other matches. If the movie there are searching for is not there then nothing will happen when they hit the 'Submit' button
 
 ## Add Movies Page
 * There is a form for the user to fill out to add a movie. All of the input boxes are text boxes. This information will be saved on the Movies Page once the user has submitted the new movie
