@@ -117,7 +117,7 @@ Testing was done on a seperate document which is: [Testing.md](https://github.co
 2. Before I go any further with Heroku I have to create a requirements file. So In my terminal I type ‘pip3 freeze --local > requirements.txt and this will create the requirements file on Gitpod.
 3. I also have to create a Profile before I push the files over to Heroku. To do this I type ‘echo web: python app.py > Procfile’ into the terminal and this will add the Profile to my list of files.
 4. I signed into heroku using ‘heroku login’ and once I was logged in I added the files to heroku. I created a new Git repository and then deployed it to the Heroku repository by typing ‘git push heroku master’ into the terminal.
-5. In Heroku I then linked the IP and port which I created in the python file. I set the IP to ‘0.0.0.0’ and the Port to ‘5000’ then I opened the app in Heroku and it opened up as expected.
+5. In Heroku I then linked the IP and port which I created in the python file. I set the IP to ‘0.0.0.0’ and the Port to ‘5000’. I also linked MONGO_URI, MONGO_DBNAME which were created in Mongo DB. I also set the SECRET_KEY which was created on (https://randomkeygen.com/) then I opened the app in Heroku and it opened up as expected.
 
 ## Deployment
 This project was developed using the GitPod (https://gitpod.io/) and was committed to git and pushed to GitHub using the built in function within GitPod.
