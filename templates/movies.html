@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 
-<!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
-<!--********** HEADING **********-->
 <h2>Movies</h2>
 
-<!--********** SUB HEADING **********-->
-<h4>Movies are listed below</h4>
+<h4>Click 'Add Movie' to add a new movie or search for an existing one</h4>
 
-<!--********** BUTTON TO ADD MOVIES **********-->
 <a
   href="{{url_for('add_movie')}}"
   class="waves-effect waves-light btn add_movie black"
   >Add Movie</a
 >
 
+<div class="search_box">
+    <form action="" id="form2">
+        <div>
+            <input type="text" id="search">
+            <input type="button" id="submit_form" onclick="checkInput()" value="Submit">
+        </div>
+    </form>
+</div>
+
+
 <!--********** COLLAPSIBLE TO SHOW ALL MOVIES **********-->
 <ul class="collapsible" data-collapsible="accordion">
   {% for movies in movie_information %}
   <li>
-  
     <!--********** COLLAPSIBLE HEADING TO SHOW MOVIES **********-->
     <div class="collapsible-header">
       <div class="task_header col s9">
         <i class="material-icons">expand_more</i
-        ><strong>{{movies.title}}</strong> &emsp;
-        <strong>- IMDB Rating</strong>
-        {% if 'imdb' in movies %} {{ movies.imdb }} {% else %} No IMDB
-        Rating {% endif %} &emsp;
-        <strong>- Rotten Tomatoes Rating</strong> - {% if 'tomato' in movies %}
-        {{ movies.tomato }} {% else %} No Rotten Tomatoes Rating {% endif
-        %}
+        ><strong>{{movies.title}}</strong>
       </div>
     </div>
 
