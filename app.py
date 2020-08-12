@@ -4,11 +4,17 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
+if os.path.exists("env.py"):
+    import env
+
 """ LINKING FLASK TO MY MONGO DB SITE WITH THE
-DATABASE NAME AND THE URI OF THE DATABASE """
+DATABASE NAME AND THE URI OF THE DATABASE AND SECRET KEY """
 app = Flask(__name__)
-app.config["MONGO_DBNAME"] = 'movie_reviews'
-app.config["MONGO_URI"] = 'mongodb+srv://cfaulkner985:mongoDB123@myfirstcluster.kyuch.mongodb.net/movie_reviews?retryWrites=true&w=majority'
+
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
+
 
 # CONNECTING MONGO TO PYMONGO
 mongo = PyMongo(app)

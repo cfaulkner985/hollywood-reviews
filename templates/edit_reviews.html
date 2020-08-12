@@ -289,36 +289,19 @@
     <br>
 
     <div class="range-field col s12">
-      <input
-        type="range"
-        name="rating"
-        id="rating"
-        min="0"
-        max="100"
-        value="{{reviews.rating}}"
-      />
-      <label for="rating">Please rate movie from 1 to 100</label>
+      <input type="range" name="rating" id="rating" min="0" max="100" value="{{reviews.rating}}">
+      <label for="rating" id="rating-label">Please rate movie from 1 to 100</label>
     </div>
 
-    <br />
+    <br>
 
     <div class="input-box col s12">
-      <textarea
-        id="thoughts"
-        name="thoughts"
-        type="text"
-        placeholder="Please enter thoughts on movie"
-        value="{{reviews.thoughts}}"
-      ></textarea>
+      <textarea id="thoughts" name="thoughts" type="text" placeholder="Please enter thoughts on movie">{{reviews.thoughts}}</textarea>
     </div>
 
-    <br />
+    <br>
 
-    <button
-      class="btn confirm_edit waves-effect waves-light black"
-      type="submit"
-      name="action"
-    >
+    <button class="btn confirm_edit waves-effect waves-light black" type="submit" name="action">
       Edit Review
       <i class="material-icons right">edit</i>
     </button>
