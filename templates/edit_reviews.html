@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 
-<!--********** INFORMATION TAKEN FROM BASE.HTML **********-->
 {% extends 'base.html' %} {% block content %}
 
-<!--********** HEADING **********-->
 <h2>Edit Movie Review</h2>
 
-<!--********** SUB HEADING **********-->
-<h4>Please edit your review from the form below</h4>
+<h4>Please edit your review on the form below</h4>
 
-<!--********** FORM TO EDIT A REVIEW **********-->
+<!--********** FORM FOR THE USER TO EDIT A REVIEW **********-->
 <div class="row">
   <form
     action="{{ url_for('update_reviews', reviews_id=reviews._id) }}"
     method="POST"
     class="col s6"
   >
-    <!--***** FIRST NAME *****-->
-    <div class="input-field col s12">
+    <div class="input-box col s12">
       <input
         id="first_name"
         name="first_name"
         type="text"
         class="validate"
+        placeholder="First Name"
         value="{{reviews.first_name}}"
       />
-      <label for="first_name">First Name</label>
     </div>
 
-    <!--***** LAST NAME *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <input
         id="last_name"
         name="last_name"
         type="text"
         class="validate"
+        placeholder="Last Name"
         value="{{reviews.last_name}}"
       />
-      <label for="last_name">Last Name</label>
     </div>
 
-    <!--***** COUNTRY *****-->
-    <div class="input-field col s12" name="country">
+    <br />
+
+    <div class="input-box col s12" name="country">
       <select
         id="country"
         name="country"
@@ -336,45 +334,48 @@
         <option value="Zambia">Zambia</option>
         <option value="Zimbabwe">Zimbabwe</option>
       </select>
-      <label>Please select Countr</label>
     </div>
 
-    <!--***** DATE REVIEWED *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <input
         type="text"
         name="date_reviewed"
         class="datepicker"
+        placeholder="Date of Review"
         value="{{reviews.date_reviewed}}"
       />
-      <label for="date_reviewed">Date of Review</label>
     </div>
 
-    <!--***** EMAIL *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <input
         id="email"
         name="email"
         type="email"
         class="validate"
+        placeholder="E-Mail"
         value="{{reviews.email}}"
       />
-      <label for="email">Email</label>
     </div>
 
-    <!--***** MOVIE REVIEWED *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <input
         id="movie_reviewed"
         name="movie_reviewed"
         type="text"
         class="validate"
+        placeholder="Movie reviewed"
         value="{{reviews.movie_reviewed}}"
       />
-      <label for="movie_reviewed">Movie Reviewed</label>
     </div>
 
-    <!--***** RANGE *****-->
+    <br />
+
     <div class="range-field col s12">
       <input
         type="range"
@@ -387,18 +388,20 @@
       <label for="rating">Please rate movie from 1 to 100</label>
     </div>
 
-    <!--***** THOUGHTS *****-->
-    <div class="input-field col s12">
+    <br />
+
+    <div class="input-box col s12">
       <textarea
         id="thoughts"
         name="thoughts"
-        class="materialize-textarea"
+        type="text"
+        placeholder="Please enter thoughts on movie"
         value="{{reviews.thoughts}}"
       ></textarea>
-      <label for="thoughts">Please enter thoughts on movie</label>
     </div>
 
-    <!--********** BUTTON TO CONFIRM EDIT OF REVIEW **********-->
+    <br />
+
     <button
       class="btn confirm_edit waves-effect waves-light black"
       type="submit"
