@@ -1,9 +1,15 @@
-/********** ALL PAGES  **********/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
   background-color: rgb(255, 255, 153);
 }
 
-/***** NAV BAR  *****/
+/***** CHANGING THE COLOUR, FONT SIZE AND POSITION OF THE NAV BAR  *****/
 nav {
   background-color: #000000;
   height: 12em;
@@ -18,17 +24,20 @@ nav ul a {
   padding: 2em 1.5em;
 }
 
-/***** SIDE BAR  *****/
+.nav-wrapper img {
+  height: 5em;
+  margin-bottom: 2em;
+}
+
 .sidenav {
   background-color: rgb(255, 255, 153);
 }
 
-/***** LOGO  *****/
 .brand-logo {
   margin-right: 1em;
 }
 
-/***** HEADING  *****/
+/***** CHANGING HEADINGS AND SUB HEADINGS TO HAVE A NICE SHADOW EFFECT WITH A BIG CLEAR FONT *****/
 h2 {
   text-align: center;
   margin: 1em 0 0.5em 0;
@@ -41,7 +50,6 @@ h2 {
   text-shadow: 0 2px #13cec4, 0 3px white;
 }
 
-/***** HEADING  *****/
 h4 {
   text-align: center;
   margin: 1em 0 0.5em 0;
@@ -53,9 +61,6 @@ h4 {
   text-shadow: 0 1px #13cec4, 0 1px white;
 }
 
-
-/********** USER PAGE  **********/
-/***** SLIDER IMAGES  *****/
 h1 {
   text-shadow: 4px 4px #000000;
   font-weight: bold;
@@ -67,30 +72,10 @@ h3 {
   font-size: 2em;
 }
 
-/***** FORM  *****/
-.input-field {
+.input-box {
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
   border-radius: 4px;
-}
-
-.nav-wrapper img {
-  height: 5em;
-  margin-bottom: 2em;
-}
-
-.input-field label {
-  color: #000;
-}
-
-.input-field input[type="text"]:focus + label {
-  color: #000;
-  padding-top: 1em;
-}
-
-.input-field input[type="email"]:focus + label {
-  color: #000;
-  padding-top: 1em;
 }
 
 .row .col {
@@ -99,7 +84,19 @@ h3 {
   margin-right: auto;
 }
 
-/***** RATINGS BAR  *****/
+#search {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 30%;
+  margin-top: 2em;
+  text-align: center;
+}
+
+/***** CHANGING RATING BAR TO A BLUE BAR AND WHITE CUSOR TO MATCH THE SITE  *****/
+/***** I ADDED CODE TO MAKE SURE IT LOAD PROPERLY ON DIFFERENT BROWSERS  *****/
 input[type="range"] {
   -webkit-appearance: none;
   margin: 18px 0;
@@ -192,23 +189,17 @@ input[type="range"]:focus::-ms-fill-upper {
   display: block;
 }
 
-/********** REVIEWS PAGE  **********/
-/***** BUTTONS  *****/
 .reviews_button {
   color: rgb(255, 255, 153);
   margin-left: 1em;
 }
 
-/********** EDIT REVIEWS PAGE  **********/
-/***** BUTTONS  *****/
 .edit_review {
   color: rgb(255, 255, 153);
   margin: auto;
   display: block;
 }
 
-/********** MOVIES PAGE  **********/
-/***** BUTTONS  *****/
 .insert_movie {
   color: rgb(255, 255, 153);
   margin: auto;
@@ -216,8 +207,15 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-top: 1em;
 }
 
-/********** ADD MOVIES PAGE  **********/
-/***** BUTTONS  *****/
+#submit_form {
+  color: rgb(255, 255, 153);
+  background-color: black;
+  margin: auto;
+  display: block;
+  width: 10%;
+  height: 2em;
+}
+
 .add_movie {
   color: rgb(255, 255, 153);
   width: 20%;
