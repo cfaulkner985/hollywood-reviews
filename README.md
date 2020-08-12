@@ -27,17 +27,14 @@ In this website I have a home page which is the page that will load up when you 
 
 Once they have filled in this information then they click on the ‘Submit Review’ button to leave their review.
 
-## Wireframe
 Wireframe mock-up for [Home Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Home%20Page.pdf)
 
 The next page is the reviews page where they can see the review they have left. They click on the collapsible tab and they will see all the information they provided. They have two options if they are not happy with the review. They could edit or delete using the ‘Edit’ and ‘Delete’ buttons provided to the right of the review
 
-## Wireframe
 Wireframe mock-up for [Reviews Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Reviews.pdf)
 
 If the user decides to click on the ‘Edit’ button then it will bring them to a page that is similar to the Home Page. They will be able to edit any choices they make previously. Once they are happy with their changes then they can click on ‘Edit Review’ button to update the changes. The changes will then appear updated on the Reviews page.
 
-## Wireframe
 Wireframe mock-up for [Edit Reviews Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Edit%20Reviews.pdf)
 
 The movie page is a database of over 2000 movies and is viewed on a collapsible menu similar to the reviews page. The main heading will show the movie’s title, IMDB rating and rotten tomatoes rating. Once the user clicks to expand it then they will see:
@@ -51,12 +48,10 @@ The movie page is a database of over 2000 movies and is viewed on a collapsible 
 
 If the user cannot find the movie they are looking for then they have the option of clicking on the ‘Add Movie’ button to add a new movie to the site
 
-## Wireframe
 Wireframe mock-up for [Movies Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Movies.pdf)
 
 If the user does click on the ‘Add Movie’ button then it will bring them to the add movie page. This page will let the user add a movie and will be able to be seen by anyone else who visits the site. The user will have the same information as the movies page to fill out to insert the movie. Once they are happy they click on the ‘Insert Movie’ button and the movie will be added to the Movies page.
 
-## Wireframe
 Wireframe mock-up for [Add Movies Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Add%20Movie.pdf)
 
 # Features
@@ -82,8 +77,9 @@ Wireframe mock-up for [Add Movies Page](https://github.com/cfaulkner985/hollywoo
 * The page also has an edit review button where the user will press to submit the review that have left which will update in the reviews page.
 
 ### Movies Page
-* This will display the list of movies in a Collapsible. The heading of the collapsible will display move title, IMDB rating and rotten tomatoes rating and when the user clicks on this it will display the rest of the information about the movie.
+* This will display the list of movies in a Collapsible. The heading of the collapsible will display the move title and when the user clicks on this it will display the rest of the information about the movie.
 * The page also has an add movie button where the user will press to add movie to the movies page. It will bring them to the add movies page
+* This page also has a search funtion where the user can search for a movie on the list of movies by typing it in and clicking on the submit button
 
 ### Add Movies Page
 * There is a form for the user to fill out to add a movie. All of the input boxes are text boxes. This information will be saved on the Movies Page once the user has submitted the new movie
@@ -117,15 +113,11 @@ When I make changes to each file I push them from GitHub from GitPod and below a
 Testing was done on a seperate document which is: [Testing.md](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Testing.md)
 
 ## Flask and Heroku
-The first this I did when creating my project was install flask. I did this my typing in ‘pip install flask’ into my project’s Gitpod terminal. Once I created the python file I ran a test to make sure that it was linked correctly and assigned it a port which I would then link to Heroku.
-
-Before I go any further with Heroku I have to create a requirements file. So In my terminal I type ‘pip3 freeze --local > requirements.txt and this will create the requirements file on Gitpod.
-
-I also have to create a Profile before I push the files over to Heroku. To do this I type ‘echo web: python app.py > Procfile’ into the terminal and this will add the Profile to my list of files.
-
-I signed into heroku using ‘heroku login’ and once I was logged in I added the files to heroku. I created a new Git repository and then deployed it to the Heroku repository by typing ‘git push heroku master’ into the terminal.
-
-In Heroku I then linked the IP and port which I created in the python file. I set the IP to ‘0.0.0.0’ and the Port to ‘5000’ then I opened the app in Heroku and it opened up as expected.
+1. The first this I did when creating my project was install flask. I did this my typing in ‘pip install flask’ into my project’s Gitpod terminal. Once I created the python file I ran a test to make sure that it was linked correctly and assigned it a port which I would then link to Heroku.
+2. Before I go any further with Heroku I have to create a requirements file. So In my terminal I type ‘pip3 freeze --local > requirements.txt and this will create the requirements file on Gitpod.
+3. I also have to create a Profile before I push the files over to Heroku. To do this I type ‘echo web: python app.py > Procfile’ into the terminal and this will add the Profile to my list of files.
+4. I signed into heroku using ‘heroku login’ and once I was logged in I added the files to heroku. I created a new Git repository and then deployed it to the Heroku repository by typing ‘git push heroku master’ into the terminal.
+5. In Heroku I then linked the IP and port which I created in the python file. I set the IP to ‘0.0.0.0’ and the Port to ‘5000’ then I opened the app in Heroku and it opened up as expected.
 
 ## Deployment
 This project was developed using the GitPod (https://gitpod.io/) and was committed to git and pushed to GitHub using the built in function within GitPod.
@@ -165,5 +157,6 @@ Image 3 -  https://www.shortlist.com/media/imager/202002/46036-original.jpg
 ### Other
 I got help for the ratings slider bar from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css// which can be viewed in my Reviwes and Edit Reviews page
 
+I got help with the search for a movie funtion from https://stackoverflow.com/questions/49937047/alert-notification-not-found-after-search-string-on-page-html/49937156
 
 My mentor Rohit Sharma was a great help guided me through this project.
