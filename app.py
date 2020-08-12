@@ -4,8 +4,8 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
-# LINKING FLASK TO MY MONGO DB SITE WITH THE
-# DATABASE NAME AND THE URI OF THE DATABASE
+""" LINKING FLASK TO MY MONGO DB SITE WITH THE
+DATABASE NAME AND THE URI OF THE DATABASE """
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'movie_reviews'
 app.config["MONGO_URI"] = 'mongodb+srv://cfaulkner985:mongoDB123@myfirstcluster.kyuch.mongodb.net/movie_reviews?retryWrites=true&w=majority'
@@ -14,8 +14,8 @@ app.config["MONGO_URI"] = 'mongodb+srv://cfaulkner985:mongoDB123@myfirstcluster.
 mongo = PyMongo(app)
 
 # ---------- REVIEWS ---------- #
-# SETTING INDEX.HTML MY OPENING PAGE FOR THE SITE
-# LINKING THE USER INFORMATION TABLE IN MONGO DB TO MY INDEX.HTML PAGE
+""" SETTING INDEX.HTML MY OPENING PAGE FOR THE SITE
+LINKING THE USER INFORMATION TABLE IN MONGO DB TO MY INDEX.HTML PAGE """
 
 
 @app.route('/')
@@ -34,9 +34,10 @@ def get_reviews():
         "reviews.html",
         added_reviews=mongo.db.added_reviews.find())
 
-# THIS CODE BRINGS THE INFORMATION I INSERT INTO INDEX.HTML TO REVIEWS.HTML
-# USING THE SUMBIT BUTTON
-# IT ALSO SAVES THE INFORMATION INTO THE ADDED REVIEWS TABLE IN MONGO DB
+
+""" THIS CODE BRINGS THE INFORMATION I INSERT INTO INDEX.HTML TO REVIEWS.HTML
+ USING THE SUMBIT BUTTON IT ALSO SAVES THE INFORMATION INTO THE ADDED REVIEWS
+ TABLE IN MONGO DB """
 
 
 @app.route('/add_reviews', methods=['POST'])
@@ -45,8 +46,9 @@ def add_reviews():
     added_reviews.insert_one(request.form.to_dict())
     return redirect(url_for('get_reviews'))
 
-# CREATED EDIT_REWIEWS.HTML SO I CAN EDIT REVIEWS CLICKING ON THE EDIT BUTTON
-# ONCE EDITED IT WILL AMMEND IN THE REVIEWS.HTML AND MONGO DB TABLE
+
+""" CREATED EDIT_REWIEWS.HTML SO I CAN EDIT REVIEWS CLICKING ON THE EDIT BUTTON
+ONCE EDITED IT WILL AMMEND IN THE REVIEWS.HTML AND MONGO DB TABLE """
 
 
 @app.route('/edit_reviews/<reviews_id>')
@@ -56,8 +58,9 @@ def edit_reviews(reviews_id):
     return render_template('edit_reviews.html', reviews=the_review,
                            added_reviews=all_reviews)
 
-# THIS CODE ALLOWS ME TO DELETE REVIEWS CLICKING ON THE DELETE BUTTON
-# ONCE DELETED IT WILL REMOVE FROM THE REVIEWS.HTML AND MONGO DB TABLE
+
+""" THIS CODE ALLOWS ME TO DELETE REVIEWS CLICKING ON THE DELETE BUTTON
+ONCE DELETED IT WILL REMOVE FROM THE REVIEWS.HTML AND MONGO DB TABLE """
 
 
 @app.route('/delete_reviews/<reviews_id>')
@@ -65,9 +68,10 @@ def delete_reviews(reviews_id):
     mongo.db.added_reviews.remove({'_id': ObjectId(reviews_id)})
     return redirect(url_for('get_reviews'))
 
-# THIS CODE IS LINKED TO THE EDIT BUTTON ON THE EDIT_REVIEWS.HTML
-# IT UPDATES THE MONGO DB TABLE WHICH THEN UPDATES THE REVIEW LEFT
-# I CAN UPDATE THE HEADING WHICH ARE LISTED BELOW
+
+""" THIS CODE IS LINKED TO THE EDIT BUTTON ON THE EDIT_REVIEWS.HTML
+IT UPDATES THE MONGO DB TABLE WHICH THEN UPDATES THE REVIEW LEFT
+I CAN UPDATE THE HEADING WHICH ARE LISTED BELOW """
 
 
 @app.route('/update_reviews/<reviews_id>', methods=["POST"])
@@ -97,9 +101,11 @@ def get_movies():
         movie_information=mongo.db.movie_information.find())
 
 
-# CREATED ADD_MOVIES.HTML SO I CAN ADD MOVIES CLICKING ON THE
-# ADD MOVIES BUTTON
-# ONCE ADDED IT WILL BE INSERTED IN THE MOVIES.HTML AND MONGO DB TABLE
+"""CREATED ADD_MOVIES.HTML SO I CAN ADD MOVIES CLICKING ON THE ADD
+MOVIES BUTTON ONCE ADDED IT WILL BE INSERTED IN THE MOVIES.HTML AND
+MONGO DB TABLE """
+
+
 @app.route('/insert_movie', methods=['POST'])
 def insert_movie():
     if request.method == "POST":
@@ -125,9 +131,9 @@ def add_movie():
     return render_template('add_movies.html')
 
 
-# USING THE ENVIRON OBJECT TO GET THE IP AND PORT
-# SETTING DEBUG TO TRUE SO CHANGES CAN BE PICKED UP IN THE BROWSER
-# ALSO PRODUCRS DEBUG STATEMENTS IF NEEDED
+""" USING THE ENVIRON OBJECT TO GET THE IP AND PORT SETTING
+DEBUG TO TRUE SO CHANGES CAN BE PICKED UP IN THE BROWSER
+ALSO PRODUCRS DEBUG STATEMENTS IF NEEDED """
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
