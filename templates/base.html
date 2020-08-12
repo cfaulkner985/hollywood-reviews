@@ -26,7 +26,7 @@
       <nav>
         <div class="nav-wrapper">
           <a href="{{url_for('add_review')}}" class="brand-logo right">
-            <img src="static/img/hollywood-reviews-logo.png" />
+            <img src="static/img/hollywood-reviews-logo.png">
           </a>
           <a
             href="{{url_for('add_review')}}"
@@ -58,10 +58,11 @@
 
     <!--********** JQUERY USED IN SITE **********-->
     <!--********** USED FOR THE SIDE NAV BAR OF ALL PAGES **********-->
-    <!--********** USED FOR THE COLLASPE FUNTION IN MOVIE PAGE **********-->
+    <!--********** USED FOR THE COLASIBLE IN REVIEW AND MOVIES PAGES **********-->
     <!--********** USED FOR THE DATE PICKER FUNTION IN USER PAGE **********-->
     <!--********** USED FOR THE COUNTRY SELECTOR FUNTION IN USER PAGE **********-->
     <!--********** USED FOR THE SLIDER IMAGES IN USER PAGE **********-->
+     <!--********** USED FOR THE SEARCH BAR IN THE MOVIES PAGE **********-->
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -83,6 +84,13 @@
       $(document).ready(function () {
         $(".slider").slider();
       });
+
+      function checkInput() {
+        var query = document.getElementById("search").value;
+        window.find(query);
+        return true;
+        
+      }
     </script>
   </body>
 </html>
