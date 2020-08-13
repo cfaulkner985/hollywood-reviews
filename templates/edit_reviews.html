@@ -4,7 +4,7 @@
 
 <h4>Please edit your review on the form below</h4>
 
-<!--********** FORM FOR THE USER TO EDIT A REVIEW **********-->
+<!--********** FORM FOR THE USER TO EDIT A REVIEW WHICH WILL STORE THE INFORMATION THEY PREVIOUSLY ENTERED **********-->
 <div class="row">
   <form
     action="{{ url_for('update_reviews', reviews_id=reviews._id) }}"
@@ -396,9 +396,8 @@
         name="thoughts"
         type="text"
         placeholder="Please enter thoughts on movie"
-      >
-{{reviews.thoughts}}</textarea
-      >
+        value="{{reviews.thoughts}}"
+      ></textarea>
     </div>
 
     <br />
