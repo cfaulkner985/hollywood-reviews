@@ -30,7 +30,7 @@ The navigation bar, logo and side bar load up on all pages as expected. Also, al
 The slider images go through on a loop as expected and can be moved quicker by clicking the little circle as expected. Typing in the input boxes are working as well as the country which brings up and list of countries as expected. Also, the date picker for date of review is working as expected. Also the ‘Submit Review’ button works as expected.
 
 ## Reviews Page
-* This will display the list of reviews in a Collapsible. The heading of the collapsible will display movie reviewed and date review and when the user clicks on this it will display the rest of the information that the user left.
+* This will display the list of reviews in a Collapsible. The heading of the collapsible will display movie reviewed and date review and when the user clicks on this it will display the rest of the information that the user left. The user will have to type in a movie they reviewed or they will get a pop up message and cant go any further.
 * There is an edit button that when the user clicks it will bring them to an edit review page where they will be able to edit the review they have left.
 * There is also a delete button that when the user clicks it will delete the review that they have left. This cannot be undone when pressed.
 <p align="center"> 
@@ -39,7 +39,7 @@ The slider images go through on a loop as expected and can be moved quicker by c
 The reviews load up correctly and the new review and others display in a collapsible as expected. The Edit button brings me to the edit reviews page as expected and the delete button removes the review which is also as expected. 
 
 ## Edit Reviews Page
-* There is a form for the user to fill out to edit a review. All of the input boxes are text boxes apart from the country and date of review. The user will have to choose their country from a list using a dropdown box with all countries listed. The date of review will bring up a date picker box where the user can select the exact date that they left the review. The user will see the information they have previously left to edit.
+* There is a form for the user to fill out to edit a review. All of the input boxes are text boxes apart from the country and date of review. The user will have to choose their country from a list using a dropdown box with all countries listed. The date of review will bring up a date picker box where the user can select the exact date that they left the review. The user will see the information they have previously left to edit. If the user deletes the movie they reviewed and tries to edit they wont be able to and will see an error message
 * The page also has an edit review button where the user will press to submit the review that have left which will update in the reviews page.
 <p align="center"> 
 <img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/edit-reviews.png">
