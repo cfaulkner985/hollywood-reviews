@@ -17,7 +17,10 @@
       type="text/css"
     />
     <title>Hollywood Reviews</title>
-    <link rel="icon" href="{{url_for('static', filename='img/hollywood-icon.jpg')}}" />
+    <link
+      rel="icon"
+      href="{{url_for('static', filename='img/hollywood-icon.jpg')}}"
+    />
   </head>
 
   <!--********** NAV BAR AND LOGO **********-->
@@ -26,7 +29,9 @@
       <nav>
         <div class="nav-wrapper">
           <a href="{{url_for('add_review')}}" class="brand-logo right">
-            <img src="{{url_for('static', filename='img/hollywood-reviews-logo.png')}}" />
+            <img
+              src="{{url_for('static', filename='img/hollywood-reviews-logo.png')}}"
+            />
           </a>
           <a
             href="{{url_for('add_review')}}"
@@ -63,6 +68,7 @@
     <!--********** USED FOR THE COUNTRY SELECTOR FUNTION IN USER PAGE **********-->
     <!--********** USED FOR THE SLIDER IMAGES IN USER PAGE **********-->
     <!--********** USED FOR THE SEARCH BAR IN THE MOVIES PAGE **********-->
+    <!--********** VALIDATION FOR WHEN USER DOES NOT TYPE IN A MOVIE REVIEWED ON INDEX.HTML **********-->
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -89,6 +95,14 @@
         var query = document.getElementById("search").value;
         window.find(query);
         return true;
+      }
+
+      function validateForm() {
+        var x = document.forms["reviews-form"]["movie_reviewed"].value;
+        if (x == "") {
+          alert("Please enter the title of the movie are reviewing");
+          return false;
+        }
       }
     </script>
   </body>
