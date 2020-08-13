@@ -94,20 +94,21 @@ Wireframe mock-up for [Add Movies Page](https://github.com/cfaulkner985/hollywoo
 * I used MongoDB to store the information for the sites including the movie database and reviews database.
 * I used Gitpod (https://gitpod.io/) to build the website.
 * I used Materaize (https://materializecss.com/) get HTML, jQuery and CSS code for my project.
-* I used JQuery (https://jquery.com/) for the JavaScript in the website
-* I used Material Icons (https://material.io/resources/icons/to add the icons for the buttons
-* Block templates were used so I don’t have to repeat my code to save time
-* I used autopep8 (https://github.com/hhatto/autopep8) to tidy up my python code
+* I used JQuery (https://jquery.com/) for the JavaScript in the website.
+* I used Material Icons (https://material.io/resources/icons/to add the icons for the buttons.
+* Block templates were used so I don’t have to repeat my code to save time.
+* I used autopep8 (https://github.com/hhatto/autopep8) to tidy up my python code.
+* I used movieDetails.json file to store the movies on Mongo DB and are shown on the movies page.
 * Other rechnologies used can be found in my [Requirements](https://github.com/cfaulkner985/hollywood-reviews/blob/master/requirements.txt) file.
-* The project also uses AutoPrefixer (https://autoprefixer.github.io/) and makes sure the CSS is valid for all web browsers
+* The project also uses AutoPrefixer (https://autoprefixer.github.io/) and makes sure the CSS is valid for all web browsers.
 
 ## Committing files to GitHub
 When I make changes to each file I push them from GitHub from GitPod and below are the steps I do to do this. This is essential as to not losing any of the work I have done.
-1.	On my GitPod project scroll down and click on the command prompt at the bottom
-2. Check status by typing in ‘git status’
-3.	Type ‘git add’ to add the files for staging
-4.	Type ‘git commit -m "Add all files" to commit the files
-5.	Type ‘git push’ to push the files to GitHub
+1.	On my GitPod project scroll down and click on the command prompt at the bottom.
+2. Check status by typing in ‘git status’.
+3.	Type ‘git add’ to add the files for staging.
+4.	Type ‘git commit -m "Add all files" to commit the files.
+5.	Type ‘git push’ to push the files to GitHub.
 
 ## Testing
 Testing was done on a seperate document which is: [Testing.md](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Testing.md)
@@ -122,20 +123,20 @@ Testing was done on a seperate document which is: [Testing.md](https://github.co
 ## Deployment
 This project was developed using the GitPod (https://gitpod.io/) and was committed to git and pushed to GitHub using the built in function within GitPod.
 In GitHub the repository is cfaulkner985/Hollywood-reviews (https://github.com/cfaulkner985/hollywood-reviews). Below is the way to deploy the files to Heroku:
-1. From by GitPod terminal I log into my Heroku account by typing in 'heroku login' and press return 
-2. I then press any key on the keyboard to continue and it will log me into my heroku account
-3. Also from the GitPod terminal I push the files to Heroku by typing in 'git push heroku master'
-4. From heroku I click on my project which is 'hollywood reviews'
-5. I then click on Deploy which is a tab along the top
+1. From by GitPod terminal I log into my Heroku account by typing in 'heroku login' and press return .
+2. I then press any key on the keyboard to continue and it will log me into my heroku account.
+3. Also from the GitPod terminal I push the files to Heroku by typing in 'git push heroku master'.
+4. From heroku I click on my project which is 'hollywood reviews'.
+5. I then click on Deploy which is a tab along the top.
 6. From this page I scroll down to the bottom and click on 'Deploy Branch' and make sure 'master' is selected.
-7. After this is then lets me know it is seccessfully deployed and can be found at 'https://hollywood-reviews.herokuapp.com/'
+7. After this is then lets me know it is seccessfully deployed and can be found at (https://hollywood-reviews.herokuapp.com/).
 
 
 ## How to run this project locally
 1. To locally start all of the process types that are defined in your Procfile:
 2. I type in 'heroku local' into the terminal (heroku local is a shorter alternative to heroku local:start which does the same thing.)
-3. To locally start I then type in 'heroku local web'
-4. I can now the app locally.
+3. To locally start I then type in 'heroku local web'.
+4. I can now the app locally. The link for the local site is (https://8080-e3b87783-680f-43b3-9691-a01d96db15f0.ws-eu01.gitpod.io/).
 5. I then press Ctrl+C to shut it down when I am done.
 
 ## Credits
