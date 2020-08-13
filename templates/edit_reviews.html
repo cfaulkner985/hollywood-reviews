@@ -7,7 +7,7 @@
 <!--********** FORM FOR THE USER TO EDIT A REVIEW WHICH WILL STORE THE INFORMATION THEY PREVIOUSLY ENTERED **********-->
 <div class="row">
   <form
-    action="{{ url_for('update_reviews', reviews_id=reviews._id) }}"
+    action="{{ url_for('update_reviews', reviews_id=reviews._id) }}" name="reviews-form" onsubmit="return validateForm()" method="POST" class="col s6" required
     method="POST"
     class="col s6"
   >
