@@ -209,6 +209,12 @@ input[type="range"]:focus::-ms-fill-upper {
   display: block;
 }
 
+.confirm_edit {
+  color: rgb(255, 255, 153);
+  margin: auto;
+  display: block;
+}
+
 .insert_movie {
   color: rgb(255, 255, 153);
   margin: auto;
@@ -231,3 +237,5 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-left: 40%;
   margin-right: 30%;
 }
+
+
