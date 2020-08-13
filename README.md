@@ -122,7 +122,7 @@ Testing was done on a seperate document which is: [Testing.md](https://github.co
 ## Deployment
 This project was developed using the GitPod (https://gitpod.io/) and was committed to git and pushed to GitHub using the built in function within GitPod.
 In GitHub the repository is cfaulkner985/Hollywood-reviews (https://github.com/cfaulkner985/hollywood-reviews). Below is the way to deploy the files to Heroku:
-1. From by GitPod terminal I loginto my Heroku account by typing in 'heroku login' and press return 
+1. From by GitPod terminal I log into my Heroku account by typing in 'heroku login' and press return 
 2. I then press any key on the keyboard to continue and it will log me into my heroku account
 3. Also from the GitPod terminal I push the files to Heroku by typing in 'git push heroku master'
 4. From heroku I click on my project which is 'hollywood reviews'
