@@ -37,7 +37,7 @@
 
 <!--********** FORM FOR THE USER TO LEAVE A REVIEW **********-->
 <div class="row">
-  <form action="{{ url_for('add_reviews') }}" method="POST" class="col s6">
+  <form action="{{ url_for('add_reviews') }}" name="reviews-form" onsubmit="return validateForm()" method="POST" class="col s6" required>
     <div class="input-box col s12">
       <input
         id="first_name"
