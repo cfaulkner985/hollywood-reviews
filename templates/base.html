@@ -68,6 +68,7 @@
     <!--********** USED FOR THE COUNTRY SELECTOR FUNTION IN USER PAGE **********-->
     <!--********** USED FOR THE SLIDER IMAGES IN USER PAGE **********-->
     <!--********** USED FOR THE SEARCH BAR IN THE MOVIES PAGE **********-->
+    <!--********** USED FOR THE CHECKING IF SEARCH BAR IS EMPTY IN THE MOVIES PAGE **********-->
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -92,6 +93,10 @@
 
       function checkInput() {
         var query = document.getElementById("search").value;
+        if (query == "") {
+          alert("Input is empty");
+          return false;
+        }
         window.find(query);
         return true;
       }
