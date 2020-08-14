@@ -222,13 +222,15 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-top: 1em;
 }
 
+.search_movie {
+  color: white;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 30%;
+}
+
 #submit_form {
   color: rgb(255, 255, 153);
-  background-color: black;
-  margin: auto;
-  display: block;
-  width: 10%;
-  height: 2em;
 }
 
 .add_movie {
@@ -237,5 +239,3 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-left: 40%;
   margin-right: 30%;
 }
-
-
