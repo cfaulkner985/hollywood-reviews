@@ -7,9 +7,11 @@
 <!--********** FORM FOR THE USER TO EDIT A REVIEW WHICH WILL STORE THE INFORMATION THEY PREVIOUSLY ENTERED **********-->
 <div class="row">
   <form
-    action="{{ url_for('update_reviews', reviews_id=reviews._id) }}" name="reviews-form" onsubmit="return validateForm()" method="POST" class="col s6" required
+    action="{{ url_for('update_reviews', reviews_id=reviews._id) }}"
+    name="reviews-form"
     method="POST"
     class="col s6"
+    required
   >
     <div class="input-box col s12">
       <input
@@ -369,6 +371,7 @@
         class="validate"
         placeholder="Movie reviewed"
         value="{{reviews.movie_reviewed}}"
+        required
       />
     </div>
 

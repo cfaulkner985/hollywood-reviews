@@ -11,14 +11,22 @@
 >
 
 <div class="search_box">
-  <form action="" id="form2">
+  <form
+    action=""
+    name="search_movie"
+    onsubmit="return emptyValidation()"
+    method="POST"
+    required
+  >
     <div>
-      <input type="text" id="search" />
+      <input type="text" id="search" name="search" required />
       <input
-        type="button"
+        type="submit"
         id="submit_form"
         onclick="checkInput()"
         value="Submit"
+        class="waves-effect waves-light btn search_movie black"
+        required
       />
     </div>
   </form>

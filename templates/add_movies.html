@@ -5,7 +5,14 @@
 <h4>Please add a movie on the form below</h4>
 
 <!--********** FORM TO ADD MOVIES **********-->
-<form action="{{ url_for('insert_movie') }}" method="POST" class="col s12">
+<form
+  action="{{ url_for('insert_movie') }}"
+  method="POST"
+  class="col s12"
+  name="movie_added"
+  onsubmit="return emptyValidation()"
+  required
+>
   <div class="row">
     <div class="input-box col s6">
       <input
@@ -14,6 +21,7 @@
         type="text"
         class="validate"
         placeholder="Title"
+        required
       />
     </div>
 
