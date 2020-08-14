@@ -23,14 +23,18 @@ The navigation bar, logo and side bar load up on all pages as expected. Also, al
 </p>
 
 * There is a form for the user to fill out to leave a review. All of the input boxes are text boxes apart from the country and date of review. The user will have to choose their country from a list using a dropdown box with all countries listed. The date of review will bring up a date picker box where the user can select the exact date that they left the review.
-* The page also has a submit button where the user will press to submit the review that have left will be brought to the reviews page
+* The page also has a submit button where the user will press to submit the review that have left will be brought to the reviews page. The user will have to type in a movie they reviewed or they will get a pop up message and cant go any further.
+<p align="center"> 
+<img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/reviews-validation.png">
+</p>
+
 <p align="center"> 
 <img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/add-review.png">
 </p>
 The slider images go through on a loop as expected and can be moved quicker by clicking the little circle as expected. Typing in the input boxes are working as well as the country which brings up and list of countries as expected. Also, the date picker for date of review is working as expected. Also the ‘Submit Review’ button works as expected.
 
 ## Reviews Page
-* This will display the list of reviews in a Collapsible. The heading of the collapsible will display movie reviewed and date review and when the user clicks on this it will display the rest of the information that the user left. The user will have to type in a movie they reviewed or they will get a pop up message and cant go any further.
+* This will display the list of reviews in a Collapsible. The heading of the collapsible will display movie reviewed and date review and when the user clicks on this it will display the rest of the information that the user left.
 * There is an edit button that when the user clicks it will bring them to an edit review page where they will be able to edit the review they have left.
 * There is also a delete button that when the user clicks it will delete the review that they have left. This cannot be undone when pressed.
 <p align="center"> 
@@ -40,7 +44,10 @@ The reviews load up correctly and the new review and others display in a collaps
 
 ## Edit Reviews Page
 * There is a form for the user to fill out to edit a review. All of the input boxes are text boxes apart from the country and date of review. The user will have to choose their country from a list using a dropdown box with all countries listed. The date of review will bring up a date picker box where the user can select the exact date that they left the review. The user will see the information they have previously left to edit. If the user deletes the movie they reviewed and tries to edit they wont be able to and will see an error message
-* The page also has an edit review button where the user will press to submit the review that have left which will update in the reviews page.
+* The page also has an edit review button where the user will press to submit the review that have left which will update in the reviews page. The user will have to type in a movie reviewed or they will get a pop up message and cant go any further.
+<p align="center"> 
+<img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/edit-reviews-validation.png">
+</p>
 <p align="center"> 
 <img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/edit-reviews.png">
 </p>
@@ -52,7 +59,10 @@ The Edit Review page load up correctly and displays the form to edit the reviews
 ## Movies Page
 * This will display the list of movies in a collapsible. The heading of the collapsible will displays movie title and when the user clicks on this it will display the rest of the information about the movie. 
 * The page also has an add movie button where the user will press to add movie to the movies page. It will bring them to the add movies page
-* This page also has a search funtion where the user can search for a movie on the list of movies by typing it in and clicking on the submit button
+* This page also has a search funtion where the user can search for a movie on the list of movies by typing it in and clicking on the submit button. If the search box is empty and they click submit then an error message will appear.
+<p align="center"> 
+<img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/movies-validation.png">
+</p>
 <p align="center"> 
 <img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/movies.png">
 </p>
@@ -63,8 +73,11 @@ The Edit Review page load up correctly and displays the form to edit the reviews
 The movies page loads up correctly when the link is clicked. The movies display in a collapsible and when you click on the heading it displays the rest of the information as expected. The user then can click on the Add Movie button which will bring the user to the add movies page as expected. Also when the user searches for the movie and clicks 'Submit'. It will bring them to the movie they want and if they keep pressing 'Submit' it will bring them to other matches. If the movie there are searching for is not there then nothing will happen when they hit the 'Submit' button
 
 ## Add Movies Page
-* There is a form for the user to fill out to add a movie. All of the input boxes are text boxes. This information will be saved on the Movies Page once the user has submitted the new movie. The user will have to type in a movie they want to add or they will get a pop up message and cant go any further.
-* The page also has an ‘Add Movie’ button where the user will press to add the movie that have inputted which will update in the movies page.
+* There is a form for the user to fill out to add a movie. All of the input boxes are text boxes. This information will be saved on the Movies Page once the user has submitted the new movie.
+* The page also has an Insert Movie button where the user will press to add the movie that have inputted which will update in the movies page. The user will have to type in the title of the movie or they will get a pop up message and cant go any further.
+<p align="center"> 
+<img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/add-movies-validation.png">
+</p>
 <p align="center"> 
 <img src="https://github.com/cfaulkner985/hollywood-reviews/blob/master/testing/add-movie.png">
 </p>
