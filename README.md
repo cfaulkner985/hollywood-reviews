@@ -4,8 +4,6 @@
 
 # ReadMe
 
-Link to view the website - https://hollywood-reviews.herokuapp.com/
-
 I am creating a moved based website called Hollywood reviews. This website will be for movie lover who want to share their views on the latest or other movies they have seen. Also the website will include a movie database so if the user wants to find out information about the movie eg. Directors, actors then they will find it here. If there is a chance that the movie is not here then they will be able to add it as there is an add movie function on the site.
 # UX
 This website is based for people of all ages as movies are something that everyone no matter what age can enjoy. It is also for people who like to give their thoughts on a movie either if its good or bad.
