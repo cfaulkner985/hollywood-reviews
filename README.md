@@ -25,15 +25,9 @@ In this website I have a home page which is the page that will load up when you 
 
 Once they have filled in this information then they click on the ‘Submit Review’ button to leave their review.
 
-Wireframe mock-up for [Home Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Home%20Page.pdf)
-
 The next page is the reviews page where they can see the review they have left. They click on the collapsible tab and they will see all the information they provided. They have two options if they are not happy with the review. They could edit or delete using the ‘Edit’ and ‘Delete’ buttons provided to the right of the review
 
-Wireframe mock-up for [Reviews Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Reviews.pdf)
-
 If the user decides to click on the ‘Edit’ button then it will bring them to a page that is similar to the Home Page. They will be able to edit any choices they make previously. Once they are happy with their changes then they can click on ‘Edit Review’ button to update the changes. The changes will then appear updated on the Reviews page.
-
-Wireframe mock-up for [Edit Reviews Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Edit%20Reviews.pdf)
 
 The movie page is a database of over 2000 movies and is viewed on a collapsible menu similar to the reviews page. The main heading will show the movie’s title, IMDB rating and rotten tomatoes rating. Once the user clicks to expand it then they will see:
 
@@ -46,11 +40,8 @@ The movie page is a database of over 2000 movies and is viewed on a collapsible 
 
 If the user cannot find the movie they are looking for then they have the option of clicking on the ‘Add Movie’ button to add a new movie to the site
 
-Wireframe mock-up for [Movies Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Movies.pdf)
-
 If the user does click on the ‘Add Movie’ button then it will bring them to the add movie page. This page will let the user add a movie and will be able to be seen by anyone else who visits the site. The user will have the same information as the movies page to fill out to insert the movie. Once they are happy they click on the ‘Insert Movie’ button and the movie will be added to the Movies page.
 
-Wireframe mock-up for [Add Movies Page](https://github.com/cfaulkner985/hollywood-reviews/blob/master/Wireframes/Wireframe%20-%20Add%20Movie.pdf)
 
 # Features
 ## Existing Features
